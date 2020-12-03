@@ -43,7 +43,7 @@ public class App {
 
     private static int determineValue(final int argNumber, final String[] args, final String envName, final int defaultValue) {
         final String valStr = System.getenv(envName);
-        if (args.length > argNumber + 1) {
+        if (args.length > argNumber) {
             return Integer.parseInt(args[argNumber]);
         } else if (!isNull(valStr)) {
             return Integer.parseInt(valStr);
